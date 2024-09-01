@@ -1,0 +1,6 @@
+[submodule "address-service"]
+	path = address-service
+	url = git@github.com:Priyansusahoo/address-service.git
+[submodule "employee-service"]
+	path = employee-service
+	url = git@github.com:Priyansusahoo/employee-service.git
