@@ -1,0 +1,9 @@
+package com.priyansu.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.priyansu.demo.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService implements EmployeeServiceInterf{
+}

@@ -1,0 +1,38 @@
+package com.priyansu.demo.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "employee")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+public class Employee {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+	
+	@SuppressWarnings("unused")
+	@Column(name = "name")
+	private String name;
+	
+	@SuppressWarnings("unused")
+	@Column(name = "email")
+	private String email;
+	
+	@SuppressWarnings("unused")
+	@Column(name = "bloodgroup")
+	private String bloodgroup;
+}

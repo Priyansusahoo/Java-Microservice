@@ -1,0 +1,5 @@
+package com.priyansu.demo.config;
+
+public class EmployeeServiceConfig {
+
+}

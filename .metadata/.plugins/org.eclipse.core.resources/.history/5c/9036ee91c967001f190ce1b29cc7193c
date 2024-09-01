@@ -1,0 +1,34 @@
+package com.priyansu.demo.service;
+
+import java.util.Optional;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.priyansu.demo.dto.response.EmployeeResponse;
+import com.priyansu.demo.entity.Employee;
+import com.priyansu.demo.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService implements EmployeeServiceInterf{
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+	
+	public EmployeeResponse getEmployeeDetailsById(int id) {
+		Optional<Employee> employee = employeeRepository.findById(id);
+		
+		if (employee.isPresent()) {
+			EmployeeResponse employeeResponse = 
+						modelMapper.map(employee, EmployeeResponse.class);
+			return employeeResponse;
+		} else {
+			return null;
+		}
+	}
+
+}

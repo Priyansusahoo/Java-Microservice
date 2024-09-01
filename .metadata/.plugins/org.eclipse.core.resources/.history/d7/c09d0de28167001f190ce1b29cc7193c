@@ -1,0 +1,12 @@
+package com.priyansu.demo.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.priyansu.demo.service.EmployeeService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+public class EmployeeController{
+	private final EmployeeService employeeService;
+}

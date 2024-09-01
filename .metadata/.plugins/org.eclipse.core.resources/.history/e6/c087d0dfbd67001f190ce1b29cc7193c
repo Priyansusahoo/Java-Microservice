@@ -1,0 +1,27 @@
+package com.priyansu.demo.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.priyansu.demo.dto.EmployeeResponse;
+import com.priyansu.demo.entity.Employee;
+import com.priyansu.demo.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService implements EmployeeServiceInterf{
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+	
+	public EmployeeResponse getEmployeeDetailsById(int id) {
+		Optional<Employee> employee = employeeRepository.findById(id);
+		
+		if (employee.isPresent()) {
+			
+		}
+		return null;
+	}
+
+}

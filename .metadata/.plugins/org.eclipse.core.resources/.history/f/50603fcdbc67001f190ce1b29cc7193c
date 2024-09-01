@@ -1,0 +1,13 @@
+package com.priyansu.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.priyansu.demo.dto.EmployeeResponse;
+
+@Service
+public class EmployeeService implements EmployeeServiceInterf{
+	public EmployeeResponse getEmployeeDetails(int id) {
+		
+	}
+
+}

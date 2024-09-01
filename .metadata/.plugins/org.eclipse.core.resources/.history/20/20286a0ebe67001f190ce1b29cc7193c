@@ -1,0 +1,22 @@
+package com.priyansu.demo.dto.response;
+
+import lombok.Data;
+
+@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@EqualsAndHashCode(callSuper = false)
+public class EmployeeResponse {
+
+	@SuppressWarnings("unused")
+	private int id;
+	
+	@SuppressWarnings("unused")
+	private String name;
+
+	@SuppressWarnings("unused")
+	private String email;
+	
+	@SuppressWarnings("unused")
+	private String bloodgroup;
+}
